@@ -1,23 +1,26 @@
-import time
-print ("Welcome to amazon company name shortener. Enter you company name (Min 3 words) and we will show you a shortened name.")
-time.sleep(1)
-ans = "Y"
-while ans == "Y":
-    string = input("Enter your company name here: ")
-    def shorten_string(string):
-        words = string.split()
-        if len(words) <= 2:
-            return string
-        else:
-            return ' '.join(words[:2])
-    time.sleep(1)
-    print("The origional name was:", string)
-    time.sleep(1)
-    print("The shortened name is:", shorten_string(string))
-    if ans =="N":
+#welcome text
+print("Welcome to the company name analyser")
+i = 0
+cn = " "
+while cn != "q":
+    cn = input("Please enter company name or enter 'q' if you would like to quit.")
+    if cn == "q":
         break
-    if ans == "Y":
-        time.sleep(2)
-        ans = input("Type 'y' to use this system again or anything else to end the code: ").upper()
-time.sleep(2)
-print("Thankyou for using the amazon company name shortening system (ACNSS)")
+    elif cn != "q":
+        cnlist = cn.split()
+        print(cnlist)
+        i += 1
+    length = len(cnlist)
+    for length in length:
+        i = i+1
+if i <= 2:
+    print("your book name will sell well")
+elif i > 2:
+    print("shorten your name to get better sales")
+
+
+    #elif length >= 2:
+       # print("your book name will sell well")
+   # else:
+      #  print("shorten your name to get better sales")
+
