@@ -1,3 +1,8 @@
-def capital_indexes(string):
-    return [i for i, c in enumerate(string) if c.isupper()]
-capital_indexes("hellO")
+
+def capital_indexes(s):
+    lst = []
+    for index, ch in enumerate(s):
+        if ch.isupper():
+            lst.append(index)
+    return lst
+print (capital_indexes("Hel l A"))
