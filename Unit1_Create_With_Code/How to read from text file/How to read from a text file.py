@@ -1,2 +1,2 @@
-with open("mytextfile2.txt", "r") as file:
-    Print(file.read())
+with open("mytextfile.txt", "r") as file:
+    print(file.read())
