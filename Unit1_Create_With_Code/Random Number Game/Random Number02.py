@@ -19,7 +19,7 @@ while play == "Y":
     # a way to help with human error
     else:
         guess_limit = 0
-    while guesses <= guess_limit:
+    while guesses < guess_limit:
         print(f"You have {guess_limit - guesses} tries left")
         # printing the amount of tries left every time the user is about to guess
         guess = int(input("Guess your number, (0-100): "))
@@ -34,7 +34,7 @@ while play == "Y":
         elif guess > num:
             guesses = guesses + 1
             print("Go lower")
-    if guesses > guess_limit:
+    if guesses >= guess_limit:
         print(f"Oh no, you hit the guess limit! you lost :(  The number was {num}. You were only {abs(num - guess)} off!")
     play = input("Would you like to play again? Y/N: ").upper()
 print("Thankyou for playing my game.")

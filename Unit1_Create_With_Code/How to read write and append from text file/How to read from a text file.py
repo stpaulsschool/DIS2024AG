@@ -2,7 +2,8 @@ with open("mytextfile.txt", "r") as file: #open file from read - "r" access
     print(file.read()) # read file
 
 mylist = ["a", "b", "c"]
-
+name = input("enter name: ")
+mylist.append(name)
 for item in mylist: #for item in list
     with open("mytextfile.txt", "a") as file: # open the file with access
         file.write(item) # write each item in list
