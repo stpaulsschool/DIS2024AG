@@ -7,6 +7,7 @@ while play == "Y":
     print(num)
     # selecting difficulty with difi as variable
     difi = int(input("what difficulty would you like? 1, 2 or 3.  (3 being the hardest): "))
+
     if difi == 1:
         guess_limit = 7
         guesses = 0
