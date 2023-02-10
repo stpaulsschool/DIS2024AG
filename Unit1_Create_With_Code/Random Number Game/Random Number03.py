@@ -4,11 +4,10 @@ while play == "Y":
     num = random.randint(0, 100)
     print(num)
     # selecting difficulty with difi as variable
+    name = input("What is your name?: ")
     guesses = None
     guess_limit = None
-
     while not guesses:
-        name = input("What is your name?: ")
         difi = int(input("what difficulty would you like? 1, 2 or 3.  (3 being the hardest): "))
         match difi:
             case 1:
@@ -38,6 +37,12 @@ while play == "Y":
             print("Go lower")
     if guesses >= guess_limit:
         print(f"Noo, you hit the guess limit! you lost :( The number was {num}. You were only {abs(num - guess)} off!")
-
+    with open("mytextfile.txt", "a") as file: # open the file with access
+        file.write(f"{name} guessed the number in {guesses} tries. On dificulty level {difi}!")
+        file.write("\n")
+    print("-------scores-------")
+    with open("mytextfile.txt", "r") as file:  # open file from read - "r" access
+        print(file.read())
+    print("-----Scores-end-------")
     play = input("Would you like to play again? Y/N: ").upper()
 print("Thankyou for playing my game.")
