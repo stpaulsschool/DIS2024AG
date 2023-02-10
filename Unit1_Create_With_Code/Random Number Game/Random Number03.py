@@ -8,6 +8,7 @@ while play == "Y":
     guess_limit = None
 
     while not guesses:
+        name = input("What is your name?: ")
         difi = int(input("what difficulty would you like? 1, 2 or 3.  (3 being the hardest): "))
         match difi:
             case 1:
@@ -37,5 +38,6 @@ while play == "Y":
             print("Go lower")
     if guesses >= guess_limit:
         print(f"Noo, you hit the guess limit! you lost :( The number was {num}. You were only {abs(num - guess)} off!")
+
     play = input("Would you like to play again? Y/N: ").upper()
 print("Thankyou for playing my game.")
