@@ -1,5 +1,4 @@
 import random
-import math
 play = input("Would you like to play? Y/N: ").upper()
 guesses = 0
 while play == "Y":
@@ -17,20 +16,6 @@ while play == "Y":
         case 3:
             guess_limit = 5
             guesses = 0
-        #try except
-   """ if difi == 1:
-        guess_limit = 7
-        guesses = 0
-    elif difi == 2:
-        guess_limit = 6
-        guesses = 0
-    elif difi == 3:
-        guess_limit = 5
-        guesses = 0
-    # a way to help with human error
-    else:
-        guess_limit = 0
-    """
     while guesses < guess_limit:
         print(f"You have {guess_limit - guesses} tries left")
         # printing the amount of tries left every time the user is about to guess
