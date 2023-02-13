@@ -37,7 +37,7 @@ while play == "Y":
             print("Go lower")
     if guesses >= guess_limit:
         print(f"Noo, you hit the guess limit! you lost :( The number was {num}. You were only {abs(num - guess)} off!")
-    with open("mytextfile.txt", "a") as file: # open the file with access
+    with open("mytextfile.txt", "a") as file:# open the file with access
         file.write(f"{name} guessed the number in {guesses} tries. On dificulty level {difi}!")
         file.write("\n")
     print("-------scores-------")
