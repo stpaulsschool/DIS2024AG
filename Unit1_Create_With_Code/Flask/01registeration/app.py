@@ -22,7 +22,5 @@ def registerUser():
         return render_template('registration.html', form=form)
 
 
-
-
 if __name__ == '__main__':
     app.run(debug=True)
