@@ -10,4 +10,36 @@
              }
         </style>
     </head>
+    <body>
+        <h2>
+            {%for message in form.email.errors %}
+                <div><p class ="error">{{ message }}</p></div>
+            {% endFor %}
+
+            {% for message in form.confirm_password_errors %}
+                <div><p class="error">{{ message }}</p></div>
+            {% endFor %}
+
+            <form action = "http://127.0.0.1:5000/registration" method =post>
+                <feildset>
+                    {{ form.hidden_tag}}
+                    {{ form.email.label }}<br>
+                    {{ form.email }}
+
+                    <br><br>
+                    {{form.password.label }}
+                    {{form.password }}
+
+                    <br><br>
+
+                    {{form.confirm_password.label }}<br>
+                    {{ form.confirm_password }}
+                    <br><br>
+
+                    {{form.submit }}
+
+                </feildset>
+            </form>
+        </h2>
+    </body>
 </html>
