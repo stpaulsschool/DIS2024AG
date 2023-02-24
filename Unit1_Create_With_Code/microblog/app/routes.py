@@ -4,8 +4,10 @@ from flask import render_template
 #def default():
     #return "<h2> Hello this is the default route"
 
+
 @app.route('/')
 @app.route('/index')
 def index():
     user = {'username': 'Andrew'}
-    return render_template("index.html", title='Home',user=user)
+    return render_template("index.html", user=user, title=user['username'])
+

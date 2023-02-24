@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <! -- The curly brace elements are JINJA tags -->
     <! -- https://palletsprojects.com/p/jinja/ -->
-    <title>{{Title}} - Microblog</title>
+    {% if title %}
+    <title>{{title}} - Microblog</title>
+    {% else %}
+    <title>Welcome to my microblog</title>
+    {% endif %}
 </head>
 <body>
         <h1>Hello, {{ user.username }}</h1>
