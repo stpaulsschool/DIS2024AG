@@ -1,5 +1,11 @@
 from app import app
+from flask import render_template
+#@app.route('/')
+#def default():
+    #return "<h2> Hello this is the default route"
+
 @app.route('/')
 @app.route('/index')
 def index():
-    return "Hello everyone in Year 11 Dis solutions. "
+    user = {'username': 'Andrew'}
+    return render_template("index.html", title='Home',user=user)
