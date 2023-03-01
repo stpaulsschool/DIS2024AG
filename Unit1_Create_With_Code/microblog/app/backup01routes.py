@@ -1,20 +1,18 @@
 from app import app
+
 #@app.route('/')
 #def default():
-    #return "<h2> Hello this is the default route"
-
+#    return "<h2>Hello.</h2>"
 @app.route('/')
 @app.route('/index')
 def index():
-    user = {'username': 'Andrew'}
-
-    return """
-    <html>
-        <head>
-            <title>Homepage - Microblog</title>
-            </head>
-            <body>
-                <h1>Hello, """+user['username'] + """!</h1>
-            </body>
-    </html>
-            """
+    user = {'username': 'David'}
+    return '''
+<html>
+    <head>
+        <title>Homepage - Microblog</title>
+    </head>
+    <body>
+        <h1>Hello, ''' +user['username'] + '''!</h1>
+    </body>
+</html>'''
