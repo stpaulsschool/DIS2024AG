@@ -10,3 +10,4 @@ class User(db.model):
 
 def __repr__(self):
     return '<User {}>'.format(self.username)
+
